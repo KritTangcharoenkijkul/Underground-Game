@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/relaxing_night_train_sound.ogg-177e252ff1fbeb8e534726a9a88a88d5.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/relaxing_night_train_sound.ogg"
+dest_files=[ "res://.import/relaxing_night_train_sound.ogg-177e252ff1fbeb8e534726a9a88a88d5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

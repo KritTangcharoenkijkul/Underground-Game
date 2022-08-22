@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Train-Brake.ogg-a59b7ad52e716f8e82b5dbf9301c3b90.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/Train-Brake.ogg"
+dest_files=[ "res://.import/Train-Brake.ogg-a59b7ad52e716f8e82b5dbf9301c3b90.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

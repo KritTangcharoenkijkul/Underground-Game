@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Train-Door-opening-and-closing-Sound-effect_1.ogg-8a2830ce073dbca55ac172813cf0a571.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/Train-Door-opening-and-closing-Sound-effect_1.ogg"
+dest_files=[ "res://.import/Train-Door-opening-and-closing-Sound-effect_1.ogg-8a2830ce073dbca55ac172813cf0a571.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

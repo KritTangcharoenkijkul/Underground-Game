@@ -1,0 +1,63 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scene/Main/MapUI/Map.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Main/Background/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Main/Control/Control.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Main/Train/Train.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Music/relaxing_night_train_sound.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Music/Train-Brake.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Music/DoorClosed.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Music/DoorOpened.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Music/Explosion.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Music/Jingle.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Music/crowd2.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Music/WinSound.ogg" type="AudioStream" id=12]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+
+[node name="Train" parent="." instance=ExtResource( 4 )]
+position = Vector2( 254, 425 )
+
+[node name="Camera2D" type="Camera2D" parent="Train"]
+position = Vector2( 708, 117 )
+current = true
+
+[node name="Map" parent="Train" instance=ExtResource( 1 )]
+position = Vector2( -254, -425 )
+
+[node name="Button" parent="Train" instance=ExtResource( 3 )]
+position = Vector2( -251, -425 )
+
+[node name="TrainRunning" type="AudioStreamPlayer" parent="Train"]
+stream = ExtResource( 5 )
+
+[node name="Brake" type="AudioStreamPlayer" parent="Train"]
+stream = ExtResource( 6 )
+volume_db = -20.0
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="Train"]
+stream = ExtResource( 8 )
+
+[node name="DoorClosed" type="AudioStreamPlayer" parent="Train"]
+stream = ExtResource( 7 )
+
+[node name="Booming2" type="AudioStreamPlayer" parent="Train"]
+stream = ExtResource( 9 )
+volume_db = 15.0
+
+[node name="Jingle" type="AudioStreamPlayer" parent="Train"]
+stream = ExtResource( 10 )
+
+[node name="Crowder" type="AudioStreamPlayer" parent="Train"]
+stream = ExtResource( 11 )
+autoplay = true
+
+[node name="WinSound" type="AudioStreamPlayer" parent="Train"]
+stream = ExtResource( 12 )

@@ -1,0 +1,171 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Assets/Background/Background2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Background/Background4.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Background/Background3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Background/Background5.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Background/Background6.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Background/Crowdbomb.png" type="Texture" id=6]
+[ext_resource path="res://Scene/Main/Background/Background.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Background/Crowd.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Background/SkyBackground4.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Background/SkyBackground1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Background/SkyBackground5.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Background/SkyBackground2.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Background/SkyBackground3.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Background/Overground.png" type="Texture" id=14]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "Background3.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 224, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Background3.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 128, 224, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 3 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+offset = Vector2( -193, 100 )
+transform = Transform2D( 1, 0, 0, 1, -193, 100 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 194, 100 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 194, 100 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 194, 100 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 15360, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( 194, 100 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 15360, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( 194, 100 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0, 196628, 1, 0, 196629, 1, 0, 196630, 1, 0, 262145, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 327681, 1, 0, 393217, 1, 0, 458753, 1, 0, 524289, 1, 0, 589825, 1, 0, 655361, 1, 0, 720897, 1, 0, 786433, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 1, 0, 851986, 1, 0, 851987, 1, 0, 851988, 1, 0, 851989, 1, 0, 851990, 1, 0, 851991, 1, 0, 851992, 1, 0, 851993, 1, 0, 851994, 1, 0, 851995, 1, 0, 851996, 1, 0, 851997, 1, 0, 851998, 1, 0, 851999, 1, 0, 852000, 1, 0, 852001, 1, 0, 852002, 1, 0, 852003, 1, 0, 852004, 1, 0, 852005, 1, 0, 852006, 1, 0, 852007, 1, 0, 852008, 1, 0, 852009, 1, 0, 852010, 1, 0, 852011, 1, 0, 852012, 1, 0, 852013, 1, 0, 852014, 1, 0, 852015, 1, 0, 852016, 1, 0, 852017, 1, 0, 852018, 1, 0, 852019, 1, 0, 852020, 1, 0, 852021, 1, 0, 852022, 1, 0, 852023, 1, 0, 852024, 1, 0, 852025, 1, 0, 852026, 1, 0, 852027, 1, 0, 852028, 1, 0, 852029, 1, 0, 852030, 1, 0, 852031, 1, 0, 852032, 1, 0, 852033, 1, 0, 852034, 1, 0, 852035, 1, 0, 852036, 1, 0, 852037, 1, 0, 852038, 1, 0, 852039, 1, 0, 852040, 1, 0, 852041, 1, 0, 852042, 1, 0, 852043, 1, 0, 852044, 1, 0, 852045, 1, 0, 852046, 1, 0, 852047, 1, 0, 852048, 1, 0, 852049, 1, 0, 852050, 1, 0, 852051, 1, 0, 852052, 1, 0, 852053, 1, 0, 852054, 1, 0, 852055, 1, 0, 852056, 1, 0, 852057, 1, 0, 852058, 1, 0, 852059, 1, 0, 852060, 1, 0, 852061, 1, 0, 852062, 1, 0, 852063, 1, 0, 852064, 1, 0, 852065, 1, 0, 852066, 1, 0, 852067, 1, 0, 852068, 1, 0, 852069, 1, 0, 852070, 1, 0, 852071, 1, 0, 852072, 1, 0, 852073, 1, 0, 852074, 1, 0, 852075, 1, 0, 852076, 1, 0, 852077, 1, 0, 852078, 1, 0, 852079, 1, 0, 852080, 1, 0, 852081, 1, 0, 852082, 1, 0, 852083, 1, 0, 852084, 1, 0, 852085, 1, 0, 852086, 1, 0, 852087, 1, 0, 852088, 1, 0, 852089, 1, 0, 852090, 1, 0, 852091, 1, 0, 852092, 1, 0, 852093, 1, 0, 852094, 1, 0, 852095, 1, 0, 852096, 1, 0, 852097, 1, 0, 852098, 1, 0, 852099, 1, 0, 852100, 1, 0, 852101, 1, 0, 852102, 1, 0, 852103, 1, 0, 852104, 1, 0, 852105, 1, 0, 852106, 1, 0, 852107, 1, 0, 852108, 1, 0, 852109, 1, 0, 852110, 1, 0, 852111, 1, 0, 852112, 1, 0, 852113, 1, 0, 852114, 1, 0, 852115, 1, 0, 852116, 1, 0, 852117, 1, 0, 852118, 1, 0, 852119, 1, 0, 852120, 1, 0, 852121, 1, 0, 852122, 1, 0, 852123, 1, 0, 852124, 1, 0, 852125, 1, 0, 852126, 1, 0, 852127, 1, 0, 852128, 1, 0, 852129, 1, 0, 852130, 1, 0, 852131, 1, 0, 852132, 1, 0, 852133, 1, 0, 852134, 1, 0, 852135, 1, 0, 852136, 1, 0, 852137, 1, 0, 852138, 1, 0, 852139, 1, 0, 852140, 1, 0, 852141, 1, 0, 852142, 1, 0, 852143, 1, 0, 852144, 1, 0, 852145, 1, 0, 852146, 1, 0, 852147, 1, 0, 852148, 1, 0, 852149, 1, 0, 852150, 1, 0, 852151, 1, 0, 852152, 1, 0, 852153, 1, 0, 852154, 1, 0, 852155, 1, 0, 852156, 1, 0, 852157, 1, 0, 852158, 1, 0, 852159, 1, 0, 852160, 1, 0, 852161, 1, 0, 852162, 1, 0, 852163, 1, 0, 852164, 1, 0, 852165, 1, 0, 852166, 1, 0, 852167, 1, 0, 852168, 1, 0, 852169, 1, 0, 852170, 1, 0, 852171, 1, 0, 852172, 1, 0, 852173, 1, 0, 852174, 1, 0, 852175, 1, 0, 852176, 1, 0, 852177, 1, 0, 852178, 1, 0, 852179, 1, 0, 852180, 1, 0, 852181, 1, 0, 852182, 1, 0, 852183, 1, 0, 852184, 1, 0, 852185, 1, 0, 852186, 1, 0, 852187, 1, 0, 852188, 1, 0, 852189, 1, 0, 852190, 1, 0, 852191, 1, 0, 852192, 1, 0, 852193, 1, 0, 852194, 1, 0, 852195, 1, 0, 852196, 1, 0, 852197, 1, 0, 852198, 1, 0, 852199, 1, 0, 852200, 1, 0, 852201, 1, 0, 852202, 1, 0, 852203, 1, 0, 852204, 1, 0, 852205, 1, 0, 852206, 1, 0, 852207, 1, 0, 852208, 1, 0, 852209, 1, 0, 852210, 1, 0, 852211, 1, 0, 852212, 1, 0, 852213, 1, 0, 852214, 1, 0, 852215, 1, 0, 852216, 1, 0, 852217, 1, 0, 852218, 1, 0, 852219, 1, 0, 852220, 1, 0, 852221, 1, 0, 852222, 1, 0, 852223, 1, 0, 852224, 1, 0, 852225, 1, 0, 852226, 1, 0, 852227, 1, 0, 852228, 1, 0, 852229, 1, 0, 852230, 1, 0, 852231, 1, 0, 852232, 1, 0, 852233, 1, 0, 852234, 1, 0, 852235, 1, 0, 852236, 1, 0, 852237, 1, 0, 852238, 1, 0, 852239, 1, 0, 852240, 1, 0, 852241, 1, 0, 852242, 1, 0, 852243, 1, 0, 852244, 1, 0, 852245, 1, 0, 852246, 1, 0, 852247, 1, 0, 852248, 1, 0, 852249, 1, 0, 852250, 1, 0, 852251, 1, 0, 852252, 1, 0, 852253, 1, 0, 852254, 1, 0, 852255, 1, 0, 852256, 1, 0, 852257, 1, 0, 852258, 1, 0, 852259, 1, 0, 852260, 1, 0, 852261, 1, 0, 852262, 1, 0, 852263, 1, 0, 852264, 1, 0, 852265, 1, 0, 852266, 1, 0, 852267, 1, 0, 852268, 1, 0, 852269, 1, 0, 852270, 1, 0, 852271, 1, 0, 852272, 1, 0, 852273, 1, 0, 852274, 1, 0, 852275, 1, 0, 852276, 1, 0, 852277, 1, 0, 852278, 1, 0, 852279, 1, 0, 852280, 1, 0, 852281, 1, 0, 852282, 1, 0, 852283, 1, 0, 852284, 1, 0, 852285, 1, 0, 852286, 1, 0, 852287, 1, 0, 852288, 1, 0, 852289, 1, 0, 852290, 1, 0, 852291, 1, 0, 852292, 1, 0, 852293, 1, 0, 852294, 1, 0, 852295, 1, 0, 852296, 1, 0, 852297, 1, 0, 852298, 1, 0, 852299, 1, 0, 852300, 1, 0, 852301, 1, 0, 852302, 1, 0, 852303, 1, 0, 852304, 1, 0, 852305, 1, 0, 852306, 1, 0, 852307, 1, 0, 852308, 1, 0, 852309, 1, 0, 852310, 1, 0, 852311, 1, 0, 852312, 1, 0, 852313, 1, 0, 852314, 1, 0, 852315, 1, 0, 852316, 1, 0, 852317, 1, 0, 852318, 1, 0, 852319, 1, 0, 852320, 1, 0, 852321, 1, 0, 852322, 1, 0, 852323, 1, 0, 852324, 1, 0, 852325, 1, 0, 852326, 1, 0, 852327, 1, 0, 852328, 1, 0, 852329, 1, 0, 852330, 1, 0, 852331, 1, 0, 852332, 1, 0, 852333, 1, 0, 852334, 1, 0, 852335, 1, 0, 852336, 1, 0, 852337, 1, 0, 852338, 1, 0, 852339, 1, 0, 852340, 1, 0, 852341, 1, 0, 852342, 1, 0, 852343, 1, 0, 852344, 1, 0, 852345, 1, 0, 852346, 1, 0, 852347, 1, 0, 852348, 1, 0, 852349, 1, 0, 852350, 1, 0, 852351, 1, 0, 852352, 1, 0, 852353, 1, 0, 852354, 1, 0, 852355, 1, 0, 852356, 1, 0, 852357, 1, 0, 852358, 1, 0, 852359, 1, 0, 852360, 1, 0, 852361, 1, 0, 852362, 1, 0, 852363, 1, 0, 852364, 1, 0, 852365, 1, 0, 852366, 1, 0, 852367, 1, 0, 852368, 1, 0, 852369, 1, 0, 852370, 1, 0, 852371, 1, 0, 852372, 1, 0, 852373, 1, 0, 852374, 1, 0, 852375, 1, 0, 852376, 1, 0, 852377, 1, 0, 852378, 1, 0, 852379, 1, 0, 852380, 1, 0, 852381, 1, 0, 852382, 1, 0, 852383, 1, 0, 852384, 1, 0, 852385, 1, 0, 852386, 1, 0, 852387, 1, 0, 852388, 1, 0, 852389, 1, 0, 852390, 1, 0, 852391, 1, 0, 852392, 1, 0, 852393, 1, 0, 852394, 1, 0, 852395, 1, 0, 852396, 1, 0, 852397, 1, 0, 852398, 1, 0, 852399, 1, 0, 852400, 1, 0, 852401, 1, 0, 852402, 1, 0, 852403, 1, 0, 852404, 1, 0, 852405, 1, 0, 852406, 1, 0, 852407, 1, 0, 852408, 1, 0, 852409, 1, 0, 852410, 1, 0, 852411, 1, 0, 852412, 1, 0, 852413, 1, 0, 852414, 1, 0, 852415, 1, 0, 852416, 1, 0, 852417, 1, 0, 852418, 1, 0, 852419, 1, 0, 852420, 1, 0, 852421, 1, 0, 852422, 1, 0, 852423, 1, 0, 852424, 1, 0, 852425, 1, 0, 852426, 1, 0, 852427, 1, 0, 852428, 1, 0, 852429, 1, 0, 852430, 1, 0, 852431, 1, 0, 852432, 1, 0, 852433, 1, 0, 852434, 1, 0, 852435, 1, 0, 852436, 1, 0, 852437, 1, 0, 852438, 1, 0, 852439, 1, 0, 852440, 1, 0, 852441, 1, 0, 852442, 1, 0, 852443, 1, 0, 852444, 1, 0, 852445, 1, 0, 852446, 1, 0, 852447, 1, 0, 852448, 1, 0, 852449, 1, 0, 852450, 1, 0, 852451, 1, 0, 852452, 1, 0, 852453, 1, 0, 852454, 1, 0, 852455, 1, 0, 852456, 1, 0, 852457, 1, 0, 852458, 1, 0, 852459, 1, 0, 852460, 1, 0, 852461, 1, 0, 852462, 1, 0, 852463, 1, 0, 852464, 1, 0, 852465, 1, 0, 852466, 1, 0, 852467, 1, 0, 852468, 1, 0, 852469, 1, 0, 852470, 1, 0, 852471, 1, 0, 852472, 1, 0, 852473, 1, 0, 852474, 1, 0, 852475, 1, 0, 852476, 1, 0, 852477, 1, 0, 852478, 1, 0, 852479, 1, 0, 852480, 1, 0, 852481, 1, 0, 852482, 1, 0, 852483, 1, 0, 852484, 1, 0, 852485, 1, 0, 852486, 1, 0, 852487, 1, 0, 852488, 1, 0, 852489, 1, 0, 852490, 1, 0, 852491, 1, 0, 852492, 1, 0, 852493, 1, 0, 852494, 1, 0, 852495, 1, 0, 852496, 1, 0, 852497, 1, 0, 852498, 1, 0, 852499, 1, 0, 852500, 1, 0, 852501, 1, 0, 852502, 1, 0, 852503, 1, 0, 852504, 1, 0, 852505, 1, 0, 852506, 1, 0, 852507, 1, 0, 852508, 1, 0, 852509, 1, 0, 852510, 1, 0, 852511, 1, 0, 852512, 1, 0, 917909, 1, 0, 917910, 1, 0, 917911, 1, 0, 917912, 1, 0, 917913, 1, 0, 917914, 1, 0, 917915, 1, 0, 917916, 1, 0, 917917, 1, 0, 917918, 1, 0, 917919, 1, 0, 917920, 1, 0, 917921, 1, 0, 917922, 1, 0, 917923, 1, 0, 917924, 1, 0, 917925, 1, 0, 917926, 1, 0, 917927, 1, 0, 917928, 1, 0, 917929, 1, 0, 917930, 1, 0, 917931, 1, 0, 917932, 1, 0, 917933, 1, 0, 917934, 1, 0, 917935, 1, 0, 917936, 1, 0, 917937, 1, 0, 917938, 1, 0, 917939, 1, 0, 917940, 1, 0, 917941, 1, 0, 917942, 1, 0, 917943, 1, 0, 918042, 1, 0, 918043, 1, 0, 918044, 1, 0, 918045, 1, 0, 918046, 1, 0, 918047, 1, 0, 918048, 1, 0 )
+
+[node name="Crowd" type="Sprite" parent="."]
+position = Vector2( 16078, 832 )
+texture = ExtResource( 6 )
+
+[node name="CrowdSafe" type="Sprite" parent="."]
+position = Vector2( 31510, 830 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 769, -444 )
+texture = ExtResource( 10 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer2"]
+position = Vector2( 796, -454 )
+texture = ExtResource( 12 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer3"]
+position = Vector2( 769, -442 )
+texture = ExtResource( 13 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer4"]
+position = Vector2( 769, -444 )
+texture = ExtResource( 9 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 15360, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer5"]
+position = Vector2( 769, -445 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer6"]
+position = Vector2( 767, -1324 )
+texture = ExtResource( 14 )
